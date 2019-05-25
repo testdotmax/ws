@@ -137,7 +137,7 @@ if($results == 1){?>
 </head>
 
 <body><p align="center">
-<img src="zs2.php?&act=<?php echo $_GET[act]; ?>&show=<?php echo $_GET[show]; ?>&keyword=<?php echo $_GET[keyword]; ?>&submit=查询&search=no&yzm_status=0" alt="myImage" />
+<img src="zs.php?&act=<?php echo $_GET[act]; ?>&show=<?php echo $_GET[show]; ?>&keyword=<?php echo $_GET[keyword]; ?>&submit=查询&search=no&yzm_status=0" alt="myImage" />
 </p></body>
 </html><?php }
 
