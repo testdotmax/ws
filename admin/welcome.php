@@ -32,7 +32,7 @@ require('../data/reader.php');
 </head>
 <body>
 <div class="page-container">
-	<p class="f-20 text-success">欢迎使用营维乐代理管理系统 <span class="f-14"></span></p>
+	<p class="f-20 text-success">欢迎使用益万年代理管理系统 <span class="f-14"></span></p>
 	
 	<table class="table table-border table-bordered table-bg">
 		<thead>
@@ -126,7 +126,7 @@ $total5=mysql_num_rows($query5);
 <footer class="footer mt-20">
 	<div class="container">
 		<p><br>
-			Copyright &copy;2017 营维乐代理管理系统 All Rights Reserved.<br>
+			Copyright &copy;2019 益万年代理管理系统 All Rights Reserved.<br>
 		
 	</div>
 </footer>

@@ -15,7 +15,7 @@ require("../data/head.php");
 
 	<meta content="telephone=no" name="format-detection">
 
-<title>营维乐代理商登录</title>
+<title>益万年代理商登录</title>
 
     <link rel="stylesheet" href="style_mb/css/Jingle.css?r=20150505">
 
@@ -134,7 +134,7 @@ echo "<script>location.href='index.php';</script>";
 
             <h1 class="title">
 
-               营维乐代理商登录
+               益万年代理商登录
 
             </h1>
 

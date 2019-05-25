@@ -135,7 +135,7 @@ if($results == 1){?>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>营维乐代理查询结果</title>
+<title>益万年代理查询结果</title>
 
 <style>
 .imgbox {width: 700px;}

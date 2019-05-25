@@ -24,7 +24,7 @@ require("../data/head.php");
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-<title>营维乐代理系统登陆</title>
+<title>益万年代理系统登陆</title>
 
 </head>
 <body>
@@ -116,7 +116,7 @@ function CheckForm()
     </form>
   </div>
 </div>
-<div class="footer">Copyright 2017 营维乐代理系统</div>
+<div class="footer">Copyright 2019 益万年代理系统</div>
 <script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script> 
 <script type="text/javascript" src="static/h-ui/js/H-ui.js"></script> 
 
