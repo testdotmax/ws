@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js之利用求余实现逢十换行</title>
+    <script>
+        window.onload=function () {
+            for(var i=0;i<50;i++){
+                document.body.innerHTML+='<div>'+i+'</div>';
+            }
+            var aDiv=document.getElementsByTagName('div');
+            for(var i=0;i<aDiv.length;i++){
+                if (i%10===0){
+                    aDiv[i].style.left=10+'px';
+                    aDiv[i].style.top=10+i*6+'px';
+                    var b=aDiv[i].style.top
+                }else {
+                    aDiv[i].style.left=10+i%10*60+'px';
+                    aDiv[i].style.top=b;
+                }
+            }
+        }
+    </script>
+    <style>
+        div{
+            width: 50px;
+            line-height: 50px;
+            text-align: center;
+            background: #CCCCCC;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>

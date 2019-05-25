@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品计价</title>
+    <script>
+        window.onload=function () {
+            var oUl=document.getElementById('ul1');
+            var aLi=oUl.getElementsByTagName('li');
+            var oSpan1=document.getElementById('span1');
+            var oStrong1=document.getElementById('strong1');
+            for (var i=0;i<aLi.length;i++){
+                fn1(aLi[i])
+            }
+            function fn1 (oLi) {
+            var aBtn=oLi.getElementsByTagName('input');
+            var oSpan=oLi.getElementsByTagName('span')[0];
+            var oEm=oLi.getElementsByTagName('em')[0];
+            var oStrong=oLi.getElementsByTagName('strong')[0];
+            var n1=Number(oSpan.innerHTML);
+            var n2=parseFloat(oEm.innerHTML);
+
+            aBtn[0].onclick=function () {
+                n1--;
+                if (n1<0){
+                    n1=0
+                }
+                oSpan.innerHTML=n1;
+                oStrong.innerHTML=n1*n2;
+                fn2('span',oSpan1);
+                fn2('strong',oStrong1);
+            }
+            aBtn[1].onclick=function () {
+                n1++;
+                oSpan.innerHTML=n1;
+                oStrong.innerHTML=n1*n2;
+                fn2('span',oSpan1);
+                fn2('strong',oStrong1);
+            }
+            }
+            function fn2 (tagName,idName) {
+                var arr=[];
+                var str=null;
+                for (var i=0;i<aLi.length;i++){
+                    var a=aLi[i].getElementsByTagName(tagName)[0];
+                    var n1=Number(a.innerHTML);
+                    arr.push(n1);
+                    str+=arr[i];
+                    idName.innerHTML=str;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<ul id="ul1">
+    <li>
+        数量：
+        <input type="button" value="-">
+        <span>0</span>
+        <input type="button" value="+">,
+        单价：<em>12</em>元,
+        共计：<strong>0</strong>元
+    </li>
+    <li>
+        数量：
+        <input type="button" value="-">
+        <span>0</span>
+        <input type="button" value="+">,
+        单价：<em>6.3</em>元,
+        共计：<strong>0</strong>元
+    </li>
+    <li>
+        数量：
+        <input type="button" value="-">
+        <span>0</span>
+        <input type="button" value="+">,
+        单价：<em>155</em>元,
+        共计：<strong>0</strong>元
+    </li>
+
+</ul>
+共<span id="span1">0</span>件,共 <strong id="strong1">0</strong>元。
+</body>
+</html>

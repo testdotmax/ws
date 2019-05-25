@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蓝天白云飞机背景图</title>
+    <style>
+        div{
+            margin: 100px auto;
+            width: 600px;
+            height: 190px;
+            border: 1px solid #000;
+            background-image: url("http://oq51rwbre.bkt.clouddn.com/bg-plane.png"),url("http://oq51rwbre.bkt.clouddn.com/bg-sun.png"), url("http://oq51rwbre.bkt.clouddn.com/bg-clouds.png");
+            background-repeat:no-repeat;
+            background-position: 80px 180px,400px 50px, 0 0;
+            background-size: 50px 50px,50px 50px,auto auto;
+            animation: move 15s linear infinite;
+        }
+        @keyframes move {
+            from{
+                background-image: url("http://oq51rwbre.bkt.clouddn.com/bg-plane.png"),url("http://oq51rwbre.bkt.clouddn.com/bg-sun.png"), url("http://oq51rwbre.bkt.clouddn.com/bg-clouds.png");
+                background-position: 80px 200px,400px 50px, 0 0;
+            }
+            to{
+                background-image: url("http://oq51rwbre.bkt.clouddn.com/bg-plane.png"), url("http://oq51rwbre.bkt.clouddn.com/bg-sun.png"),url("http://oq51rwbre.bkt.clouddn.com/bg-clouds.png");
+                background-position: 450px -100px, 400px 50px, -600px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

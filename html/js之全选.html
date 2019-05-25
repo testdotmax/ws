@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js之全选</title>
+    <script>
+        window.onload=function () {
+            var obtn1=document.getElementById('btn1');
+            var obtn2=document.getElementById('btn2');
+            var obtn3=document.getElementById('btn3');
+            var oDiv=document.getElementById('div1');
+            var oCh=oDiv.getElementsByTagName('input');
+            obtn1.onclick=function(){
+                for (var i=0;i<oCh.length;i++){
+                    oCh[i].checked=true;
+                }
+            }
+            obtn2.onclick=function () {
+                for (var i=0;i<oCh.length;i++){
+                    oCh[i].checked=false;
+                }
+            }
+            obtn3.onclick=function () {
+                for (var i=0;i<oCh.length;i++){
+                    if(oCh[i].checked==false){
+                        oCh[i].checked=true;
+                    }
+                    else {
+                        oCh[i].checked=false;
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="btn1"  type="button" value="全选">
+<input id="btn2" type="button" value="全不选">
+<input id="btn3" type="button" value="反选">
+<div id="div1">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js之简易日历</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #content{
+            width: 200px;
+            height: 400px;
+            background: #999;
+            margin: 100px auto;
+        }
+        #content ul{
+            width: 200px;
+            height: 260px;
+        }
+        #content ul li{
+            list-style: none;
+            width: 60px;
+            height: 60px;
+            float: left;
+            background: skyblue;
+            margin: 5px 0 0 5px;
+            text-align: center;
+            line-height: 60px;
+        }
+        #content .active{
+            background: red;
+        }
+        #content .text{
+            width: 190px;
+            height: 120px;
+            margin: 10px 5px ;
+            background: green;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var arr=[
+                '快过年了，大家可以商量着去哪玩吧～',
+                'erwetertwerte二月',
+                '三月33333',
+                '四月....',
+                '五月....',
+                '六月....',
+                '七月....',
+                '八月....',
+                '九月....',
+                '十月....',
+                '十一月....',
+                '十二月....'
+            ];
+            var oDiv=document.getElementById('content');
+            var aLi=oDiv.getElementsByTagName('li');
+            var oTxt=oDiv.getElementsByTagName('div')[0];
+            for (var i=0;i<aLi.length;i++){
+                aLi[i].index=i;
+                aLi[i].onmouseover=function () {
+                    for( var i=0;i<aLi.length;i++){
+                        aLi[i].className='';
+                    }
+                    this.className='active';
+                      oTxt.innerHTML='<h2>'+(this.index+1)+'月活动</h2><p>'+arr[this.index]+'</p>';
+                };
+            }
+
+        };
+    </script>
+</head>
+<body>
+<div id="content" class="calendar">
+    <ul>
+        <li class="active">一月</li>
+        <li>二月</li>
+        <li>三月</li>
+        <li>四月</li>
+        <li>五月</li>
+        <li>六月</li>
+        <li>七月</li>
+        <li>八月</li>
+        <li>九月</li>
+        <li>十月</li>
+        <li>十一月</li>
+        <li>十二月</li>
+    </ul>
+    <div class="text">
+        <h2>1月活动</h2>
+        <p>快过年了。。。</p>
+    </div>
+</div>
+</body>
+</html>

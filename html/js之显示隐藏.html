@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示隐藏</title>
+    <style>
+        div{
+            width: 100px;
+            height: 300px;
+            background-color: #999;
+            display: none;
+        }
+    </style>
+    <script>
+        function setShowHide() {
+         var odiv=document.getElementById('Show');
+         if (odiv.style.display=='block'){
+             odiv.style.display='none';
+         }
+         else {
+             odiv.style.display='block';
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="点我" onclick="setShowHide()">
+<div id="Show">
+    内容
+</div>
+</body>
+</html>

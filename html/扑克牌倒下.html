@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>扑克牌倒下</title>
+    <style>
+        h1{
+            margin-top: 100px;
+            text-align: center;
+        }
+        div{
+            width: 310px;
+            height: 438px;
+            margin: 100px auto;
+            perspective: 700px;
+        }
+        div img{
+            transform-origin: center bottom;
+            transition: transform 1s;
+        }
+        div:hover img{
+            transform: rotateX(77deg);
+        }
+    </style>
+</head>
+<body>
+<h1>鼠标放在扑克上自动倒下</h1>
+<div>
+    <img src="http://oq51rwbre.bkt.clouddn.com/pk.png">
+</div>
+</body>
+</html>

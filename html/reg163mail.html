@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高仿网易邮箱注册界面</title>
+    <style>
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        body{
+            font-size: 12px;
+            color: #555;
+        }
+        a{
+            text-decoration: none;
+            color: #039;
+        }
+        .header{
+            width: 960px;
+            height: 80px;
+            margin:0 auto;
+        }
+        .header .logo{
+            width: 644px;
+            height: 26px;
+            background: url("http://oq51rwbre.bkt.clouddn.com/glb_v2.png") no-repeat 0 0;
+            float: left;
+            margin-top: 28px;
+        }
+        .header .logo a{
+            width: 130px;
+            height: 26px;
+            display: block;
+            float: left;
+        }
+        .header .links{
+            width: 150px;
+            height: 26px;
+            float: right;
+        }
+        .header .links p{
+            text-align: right;
+            line-height: 80px;
+        }
+        .main{
+            width: 960px;
+            height: 600px;
+            margin:0 auto;
+            box-sizing: border-box;
+        }
+        .main .main_top{
+            height: 38px;
+            background-color: #6798ca;
+            border-top-left-radius: 4px;
+            border-top-right-radius:4px;
+        }
+        .main .main_top h1{
+            font-size: 14px;
+            line-height: 36px;
+            font-weight: normal;
+            color: #FFF;
+            text-indent: 20px;
+        }
+        .main .main_bottom{
+            width: 960px;
+            height: 562px;
+            box-sizing: border-box;
+        }
+        .main .main_bottom .lside{
+            width: 642px;
+            height: 561px;
+            float: left;
+            box-sizing: border-box;
+            border: 1px solid #E0E0E0;
+            border-top: none;
+        }
+        .main .main_bottom .lside .tabs{
+            width: 560px;
+            height: 34px;
+            margin-top: 50px;
+            margin-left: 80px;
+            background: url("http://oq51rwbre.bkt.clouddn.com/tab.jpg") no-repeat;
+        }
+        .main .main_bottom .lside .tabs li{
+            width: 137px;
+            height: 34px;
+            float: left;
+            line-height: 34px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .main .main_bottom .lside .data{
+            width: 560px;
+            height: 451px;
+            margin-top: 26px;
+            margin-left: 80px;
+            padding-right: 140px;
+            box-sizing: border-box;
+        }
+        .main .main_bottom .lside .data .line1{
+            height: 28px;
+            box-sizing: border-box;
+        }
+        .main .main_bottom .lside .data .line1 .tips{
+            width: 80px;
+            float: left;
+            box-sizing: border-box;
+            padding-right: 20px;
+        }
+        .main .main_bottom .lside .data .line1 .tips p{
+            font-size: 13px;
+            text-align: right;
+            line-height: 28px;
+        }
+        .main .main_bottom .lside .data .line1 .tips p span{
+            color: #c00;
+            display: inline-block;
+        }
+        .main .main_bottom .lside .data .line1 .ipt{
+            width: 333px;
+            float: left;
+        }
+        .main .main_bottom .lside .data .line1 .ipt .textipt{
+            width: 210px;
+            height: 28px;
+            box-sizing: border-box;
+        }
+        .main .main_bottom .lside .data .line1 .ipt .select_url{
+            width: 100px;
+            height: 28px;
+            box-sizing: border-box;
+        }
+        .main .main_bottom .lside .data .line1 .ipt p{
+            float: left;
+            line-height: 35px;
+        }
+        .main .main_bottom .lside .data .line2{
+            height: 28px;
+            box-sizing: border-box;
+        }
+        .main .main_bottom .lside .data .line2 .tips{
+            width: 80px;
+            float: left;
+            box-sizing: border-box;
+            padding-right: 20px;
+        }
+        .main .main_bottom .lside .data .line2 .tips p{
+            font-size: 13px;
+            text-align: right;
+            line-height: 28px;
+        }
+        .main .main_bottom .lside .data .line2 .tips p span{
+            color: #c00;
+            display: inline-block;
+        }
+        .main .main_bottom .lside .data .line2 .ipt{
+            width: 333px;
+            float: left;
+        }
+        .main .main_bottom .lside .data .line2 .ipt .textipt{
+            width: 330px;
+            height: 28px;
+            box-sizing: border-box;
+        }
+        .main .main_bottom .lside .data .line2 .ipt p{
+            float: left;
+            line-height: 35px;
+        }
+        .main .main_bottom .lside .data .line2 .ipt .vcode{
+            width: 250px;
+            height: 28px;
+            box-sizing: border-box;
+        }
+        .main .main_bottom .lside .data .line2 .ipt img{
+            height: 32px;
+            float: right;
+        }
+        .main .main_bottom .lside .data .tiaokuan{
+            line-height: 30px;
+            margin-left: 80px;
+        }
+        .main .main_bottom .lside .data .ljzc{
+            width: 119px;
+            height: 37px;
+            margin-left: 80px;
+            margin-top: 30px;
+            background: url("http://oq51rwbre.bkt.clouddn.com/glb_v2.png") no-repeat -288px -360px;
+            border: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .main .main_bottom .rside{
+            width: 318px;
+            height: 561px;
+            box-sizing: border-box;
+            background-color: #f5f5f5;
+            float: right;
+            padding-top: 80px;
+            padding-left: 45px;
+            border-right: 1px solid #E0E0E0;
+            border-bottom: 1px solid #E0E0E0;
+        }
+        .main .main_bottom .rside img{
+            width: 241px;
+            height: 326px;
+        }
+        .footer{
+            width: 960px;
+            height: 48px;
+            margin:0 auto;
+        }
+        .footer p{
+            line-height: 48px;
+            text-align: center;
+        }
+        .footer p a{
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="logo">
+        <a href="#" title="网易163免费邮"></a><a href="#" title="网易126免费邮"></a><a href="#" title="网易yeah.net免费邮"></a>
+    </div>
+    <div class="links">
+        <p><a href="#">了解更多</a>
+            |
+            <a href="#">反馈意见</a></p>
+    </div>
+</div>
+<div class="main">
+    <div class="main_top">
+        <h1>欢迎注册无限容量的网易邮箱！邮件地址可以登录使用其他网易旗下产品。</h1>
+    </div>
+    <div class="main_bottom">
+        <div class="lside">
+            <div class="tabs">
+                <ul>
+                    <li>注册字母邮箱</li>
+                    <li>注册手机号邮箱</li>
+                    <li>注册VIP邮箱</li>
+                </ul>
+            </div>
+            <div class="data">
+                <div class="line1">
+                    <div class="tips"><p><span>*</span>邮件地址</p></div>
+                    <div class="ipt">
+                        <input type="text" value="建议使用手机号注册" class="textipt">
+                        @
+                        <select name="" id="" class="select_url">
+                            <option value="163.com">163.com</option>
+                            <option value="126.com">126.com</option>
+                            <option value="yeah.net">yeah.net</option>
+                        </select>
+                        <p>6~18个字符，可使用字母、数字、下划线，需以字母开头</p>
+                    </div>
+                </div>
+                <div class="line2">
+                    <div class="tips"><p><span>*</span>密码</p></div>
+                    <div class="ipt">
+                        <input type="password" class="textipt">
+                        <p>6~16个字符，区分大小写</p>
+                    </div>
+                </div>
+                <div class="line2">
+                    <div class="tips"><p><span>*</span>确认密码</p></div>
+                    <div class="ipt">
+                        <input type="password" class="textipt">
+                        <p>请再次填写密码</p>
+                    </div>
+                </div>
+                <div class="line2">
+                    <div class="tips"><p><span>*</span>手机号码</p></div>
+                    <div class="ipt">
+                        <input type="number" class="textipt">
+                        <p>忘记密码时，可以通过该手机号码快速找回密码</p>
+                    </div>
+                </div>
+                <div class="line2">
+                    <div class="tips"><p><span>*</span>验证码</p></div>
+                    <div class="ipt">
+                        <input type="text" class="textipt vcode">
+                        <img src="http://oq51rwbre.bkt.clouddn.com/call.jpg" alt="">
+                        <p>请填写图片中的字符，不区分大小写</p>
+                    </div>
+                </div>
+                <p class="tiaokuan">
+                    <input type="checkbox" checked="checked">
+                    同意<a href="#">"服务条款"</a>和<a href="#">"隐私权相关政策"</a>
+                </p>
+                <input type="submit" value="立即注册" class="ljzc">
+            </div>
+        </div>
+        <div class="rside">
+            <img src="http://oq51rwbre.bkt.clouddn.com/reg_master.gif">
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <p>
+        <a href="#">关于网易</a>
+        <a href="#">关于网易免费邮</a>
+        <a href="#">邮箱官方博客</a>
+        <a href="#">客户服务</a>
+        <a href="#">隐私政策</a>
+        |  网易公司版权所有 © 1997-2017
+    </p>
+</div>
+</body>
+</html>

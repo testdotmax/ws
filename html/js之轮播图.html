@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js之轮播图</title>
+    <script>
+        window.onload=function () {
+            var oCon=document.getElementById('content');
+            var oBtnl=document.getElementById('btnl');
+            var oBtnr=document.getElementById('btnr');
+            var aImg=document.getElementById('img1');
+            var oHeader=document.getElementById('header');
+            var oFooter=document.getElementById('footer');
+            var arrImg=['http://oq51rwbre.bkt.clouddn.com/1_1.jpg','http://oq51rwbre.bkt.clouddn.com/2.jpeg','http://oq51rwbre.bkt.clouddn.com/3.jpg','http://oq51rwbre.bkt.clouddn.com/4.jpg','http://oq51rwbre.bkt.clouddn.com/5.jpg'];
+            var arrP=['小蚂蚁','水珠','花儿','还是花儿','蜜蜂'];
+            var oUl=document.getElementById('ul1');
+            var aLi=oUl.getElementsByTagName('li');
+            var aImg2=oUl.getElementsByTagName('img');
+            var timer=null;
+            function info() {
+                aImg.src = arrImg[i];
+                oHeader.innerHTML = i + 1 + '/' + arrImg.length;
+                oFooter.innerHTML = arrP[i];
+                for(var j=0;j<aLi.length;j++){aLi[j].className='';}
+                aLi[i].className='hover';
+            }
+            function autoPlay() {
+                i++;
+                i%=arrImg.length;
+                aImg.src = arrImg[i];
+                oHeader.innerHTML = i + 1 + '/' + arrImg.length;
+                oFooter.innerHTML = arrP[i];
+                for(var j=0;j<aLi.length;j++){aLi[j].className='';}
+                aLi[i].className='hover';
+
+            }
+            //初始化
+            var i=0;
+            info();
+            timer=setInterval(autoPlay,1000);
+            oCon.onmouseover=function () {
+                clearInterval(timer)
+            };
+            oCon.onmouseout=function () {
+                clearInterval(timer);
+                timer=setInterval(autoPlay,1000);
+            };
+
+            oBtnr.onclick=function () {
+                    if(i<arrImg.length-1){
+                        i++;
+                        info();
+
+                    }
+                    else {
+                        i=0;
+                        info()
+                    }
+            }
+            oBtnl.onclick=function () {
+                if(i>0){
+                    i--;
+                    info();
+                }
+                else {
+                    i=arrImg.length-1;
+                    info();
+                }
+            }
+
+            for(var k=0;k<aLi.length;k++){
+                aLi[k].index=k;
+                aLi[k].onmouseover=function () {
+                    aImg2[this.index].style.display='block'
+                }
+                aLi[k].onmouseout=function () {
+                    aImg2[this.index].style.display='none'
+                }
+                aLi[k].onclick=function () {
+                    for(var k=0;k<aLi.length;k++){
+                        aLi[k].className='';
+                    }
+                    this.className='hover';
+                    aImg.src=arrImg[this.index];
+                    oHeader.innerHTML =this.index+1+'/'+arrImg.length;
+                    oFooter.innerHTML = arrP[this.index];
+                    i=this.index
+                }
+            }
+        }
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #content{
+            width: 400px;
+            height: 300px;
+            margin: 100px auto 30px;
+            position: relative;
+            background: #000;
+        }
+        #img1{
+            width: 400px;
+            height: 300px;
+        }
+        #header{
+            position: absolute;
+            top: 10px;
+            left: 190px;
+            font-size: 18px;
+            color: white;
+        }
+        a{
+            width: 50px;
+            line-height: 50px;
+            background: rgba(222,222,222,0.5);
+            font-size: 40px;
+            color: black;
+            position: absolute;
+            top: 125px;
+            text-align: center;
+            text-decoration: none;
+
+        }
+        a:hover{
+            background: rgba(222,222,222,1);
+        }
+        #btnl{
+            left: 0;
+        }
+        #btnr{
+            right: 0;
+        }
+        #footer{
+            background: rgba(0,0,0,0.5);
+            width: 400px;
+            line-height: 30px;
+            color: white;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+        }
+        ul{
+            width: 100px;
+            height: 14px;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            margin: 0 auto;
+            padding-top: 1px;
+        }
+        ul li{
+            list-style:none;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            float: left;
+            margin-left: 7px;
+            position: relative;
+        }
+        ul li:hover{
+            background: red;
+        }
+        ul:hover{
+            background-color: rgba(233,233,233,0.3);
+        }
+        ul .hover{
+            background: red;
+        }
+        .img2{
+            width: 80px;
+            height: 60px;
+            position: absolute;
+            top: -70px;
+            left: -30px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <img id="img1">
+    <p id="header"></p>
+    <a id="btnl" href="#"> < </a>
+    <a id="btnr" href="#"> > </a>
+    <p id="footer">图片正在加载中...</p>
+</div>
+<ul id="ul1">
+    <li><img class="img2" src="http://oq51rwbre.bkt.clouddn.com/1_1.jpg" alt="">
+    </li>
+    <li><img class="img2" src="http://oq51rwbre.bkt.clouddn.com/2.jpeg" alt="">
+    </li>
+    <li><img class="img2" src="http://oq51rwbre.bkt.clouddn.com/3.jpg" alt="">
+    </li>
+    <li><img class="img2" src="http://oq51rwbre.bkt.clouddn.com/4.jpg" alt="">
+    </li>
+    <li><img class="img2" src="http://oq51rwbre.bkt.clouddn.com/5.jpg" alt="">
+    </li>
+</ul>
+</body>
+</html>

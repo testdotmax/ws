@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电商网站无限滚动展示效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            text-align: center;
+            margin-top: 100px;
+        }
+        div{
+            width: 600px;
+            height: 188px;
+            margin:100px auto;
+            background-color: #000;
+            border: 1px solid #000;
+            overflow: hidden;
+        }
+        div ul{
+            width: 2000px;
+            animation: move 20s linear infinite;
+        }
+        div ul:hover{
+            animation-play-state: paused;
+        }
+        div ul:hover li{
+            opacity: 0.5;
+        }
+        div ul li:hover{
+            opacity: 1;
+        }
+        @keyframes move {
+            from{
+                margin-left: 0;
+            }
+            to{
+                margin-left: -1200px;
+            }
+        }
+        div ul li{
+            list-style: none;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<h1>无限循环滚动，鼠标悬停就暂停且其他图片蒙版效果</h1>
+<div>
+    <ul>
+        <li><img src="http://oq51rwbre.bkt.clouddn.com/banner1.png" alt=""></li>
+        <li><img src="http://oq51rwbre.bkt.clouddn.com/banner2.jpg" alt=""></li>
+        <li><img src="http://oq51rwbre.bkt.clouddn.com/banner3.jpg" alt=""></li>
+        <li><img src="http://oq51rwbre.bkt.clouddn.com/banner4.jpg" alt=""></li>
+        <li><img src="http://oq51rwbre.bkt.clouddn.com/banner1.png" alt=""></li>
+        <li><img src="http://oq51rwbre.bkt.clouddn.com/banner2.jpg" alt=""></li>
+    </ul>
+</div>
+</body>
+</html>

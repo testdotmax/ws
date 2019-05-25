@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D轮播效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            perspective: 500px;
+        }
+        ul{
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            box-sizing: border-box;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateX(0deg) rotateY(0deg);
+            animation: lunbo 20s linear infinite;
+        }
+        @keyframes lunbo {
+            from{
+                transform: rotateX(0deg);
+            }
+            to{
+                transform: rotateX(360deg);
+            }
+        }
+        ul li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            font-size: 50px;
+            text-align: center;
+            line-height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        ul li img{
+            width: 200px;
+            height: 200px;
+        }
+        ul li:nth-child(1){
+            background-color: red;
+            transform: rotateX(90deg) translateZ(100px) scale(2,1);
+        }
+        ul li:nth-child(2){
+            background-color: green;
+            transform: rotateX(180deg) translateZ(100px) scale(2,1);
+        }
+        ul li:nth-child(3){
+            background-color: blue;
+            transform: rotateX(270deg) translateZ(100px) scale(2,1);
+        }
+        ul li:nth-child(4){
+            background-color: yellow;
+            transform: rotateX(360deg) translateZ(100px) scale(2,1);
+        }
+        ul li:nth-child(5){
+            background-color: skyblue;
+            transform: translate(200px) rotateY(90deg);
+        }
+        ul li:nth-child(6){
+            background-color: deeppink;
+            transform: translate(-200px) rotateY(90deg);
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="http://oq51rwbre.bkt.clouddn.com/banner1.png" alt=""></li>
+    <li><img src="http://oq51rwbre.bkt.clouddn.com/banner2.jpg" alt=""></li>
+    <li><img src="http://oq51rwbre.bkt.clouddn.com/banner3.jpg" alt=""></li>
+    <li><img src="http://oq51rwbre.bkt.clouddn.com/banner4.jpg" alt=""></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>

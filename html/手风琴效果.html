@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手风琴效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            margin-top: 100px;
+            text-align: center;
+        }
+        div{
+            width: 960px;
+            height: 300px;
+            margin: 50px auto;
+            border: 1px solid #000;
+            overflow: hidden;
+
+        }
+        div ul li{
+            width: 160px;
+            float: left;
+            list-style: none;
+            transition: width 0.5s;
+        }
+        div ul:hover li{
+            width: 100px;
+        }
+        div ul li:hover{
+            width: 460px;
+        }
+    </style>
+</head>
+<body>
+<h1>试试把鼠标放在图片上</h1>
+<div>
+    <ul>
+    <li><img src="http://oq51rwbre.bkt.clouddn.com/ad1.gif"></li>
+    <li><img src="http://oq51rwbre.bkt.clouddn.com/ad2.jpg"></li>
+    <li><img src="http://oq51rwbre.bkt.clouddn.com/ad3.jpg"></li>
+    <li><img src="http://oq51rwbre.bkt.clouddn.com/ad4.jpg"></li>
+    <li><img src="http://oq51rwbre.bkt.clouddn.com/ad5.jpg"></li>
+    <li><img src="http://oq51rwbre.bkt.clouddn.com/ad6.jpg"></li>
+    </ul>
+</div>
+</body>
+</html>
